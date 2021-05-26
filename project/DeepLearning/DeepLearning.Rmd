@@ -25,7 +25,7 @@ Descargar datos de [Google Drive](https://drive.google.com/drive/folders/1qYWWdf
 
 Comprobar que los datos se han descargado correctamente
 ```{r}
-img_sample <- image_load(path = './data/images/mini50_twoClasses/test/1/7e1cdy.jpg', target_size = c(150, 150))
+img_sample <- image_load(path = './resources/mini50_twoClasses/test/1/7e1cdy.jpg', target_size = c(150, 150))
 img_sample_array <- array_reshape(image_to_array(img_sample), c(1, 150, 150, 3))
 plot(as.raster(img_sample_array[1,,,] / 255))
 ```
