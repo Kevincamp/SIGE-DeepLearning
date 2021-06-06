@@ -31,8 +31,8 @@ plot(as.raster(img_sample_array[1,,,] / 255))
 ```
 # Carga de datos
 Directorios:
-  ```{r}
-dataset_dir           <- './data/images/mini50_twoClasses'
+```{r}
+dataset_dir           <- './resources/mini50_twoClasses'
 train_images_dir      <- paste0(dataset_dir, '/train')
 val_images_dir        <- paste0(dataset_dir, '/val')
 test_images_dir       <- paste0(dataset_dir, '/test')
@@ -40,7 +40,7 @@ comments_file          <- './data/comments/all_comments.tsv'
 ```
 
 Metadatos:
-  ```{r}
+```{r}
 metadata_train <- read_tsv(paste0(train_images_dir, "/multimodal_train.tsv"))
 metadata_train <- metadata_train %>%
   mutate(created_at = as.POSIXct(created_utc, origin="1970-01-01")) %>%
